@@ -27,5 +27,5 @@ class MongoDBPipeline:
         self.connector.close()
 
     def process_item(self, item, spider):
-        self.connector.save_item("quotes", dict(item))
+        self.connector.save_item("json_data", dict(item))
         return item
