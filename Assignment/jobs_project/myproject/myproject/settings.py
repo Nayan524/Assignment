@@ -90,3 +90,10 @@ ROBOTSTXT_OBEY = True
 # Set settings whose default value is deprecated to a future-proof value
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"
+
+MONGO_URI = "mongodb://localhost:27017"
+MONGO_DB = "scrapy_db"
+
+ITEM_PIPELINES = {
+    "myproject.pipelines.MongoDBPipeline": 300,
+}
