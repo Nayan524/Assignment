@@ -7,10 +7,7 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = "myproject"
 
-SPIDER_MODULES = ["myproject.spiders"]
-NEWSPIDER_MODULE = "myproject.spiders"
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
@@ -91,9 +88,13 @@ ROBOTSTXT_OBEY = True
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"
 
+BOT_NAME = "myproject"
+SPIDER_MODULES = ["jobs_project.myproject.myproject.spiders"]
+NEWSPIDER_MODULE = "jobs_project.myproject.myproject.spiders"
+
 MONGO_URI = "mongodb://localhost:27017"
 MONGO_DB = "scrapy_db"
 
 ITEM_PIPELINES = {
-    "myproject.pipelines.MongoDBPipeline": 300,
+    "jobs_project.myproject.myproject.pipelines.MongoDBPipeline": 300,
 }

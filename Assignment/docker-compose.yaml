@@ -1,11 +1,10 @@
-version: "3.8"
 services:
   scrapy:
     build:
       context: .
       dockerfile: Dockerfile
     volumes:
-      - .:/app
+      - ./jobs_project:/app/jobs_project
     depends_on:
       - mongodb
     environment:
